@@ -12,7 +12,7 @@ pipeline {
          }      
          stage('Upload to AWS') {
               steps {
-                  withAWS(region:'us-east-1',credentials:'Jenkins Credentials') {
+                  withAWS(region:'us-east-1',credentials:'b325d6ca-2f32-414a-99bc-fd838506700a') {
                   sh 'echo "Uploading content with AWS creds"'
                       s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'donporosky.click')
                          s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'components.html', bucket:'donporosky.click')
